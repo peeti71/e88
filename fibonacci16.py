@@ -29,7 +29,7 @@ def threader():
 
 q = Queue()
 
-numThreads = 2
+numThreads = 16
 numFibonacci = 10000
 worker = 100
 numRun = 1000
