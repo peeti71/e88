@@ -1,11 +1,14 @@
 import threading
-from queue import Queue
+import multiprocessing.dummy
+#from queue import Queue
 import time
 # for multi threading
 from threading import *
 from time import sleep
+from multiprocessing import Process, Queue
 
 
+q = Queue()
 # function for finonacci
 
 def optimized_fibonacci(f):
@@ -27,7 +30,7 @@ def threader():
         q.task_done()
 
 
-q = Queue()
+
 
 numThreads = 2
 numFibonacci = 10000
@@ -45,6 +48,6 @@ for x in range(numThreads):
 
 start = time.time()
 
-q.join()
+join()
 
 print('Entire job took:', time.time() - start)

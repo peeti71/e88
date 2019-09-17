@@ -5,7 +5,7 @@ import time
 from threading import *
 from time import sleep
 
-
+q = Queue()
 # function for finonacci
 
 def optimized_fibonacci(f):
@@ -27,7 +27,7 @@ def threader():
         q.task_done()
 
 
-q = Queue()
+
 
 numThreads = 4
 numFibonacci = 10000
